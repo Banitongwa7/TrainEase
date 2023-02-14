@@ -3,8 +3,8 @@ version: "3.8"
 services:
   # MYSQL
   db:
-    image: mysql
-    container_name: mysql
+    image: mysql_trainease
+    container_name: trainease
     ports:
       - 3306:3306
     volumes:
