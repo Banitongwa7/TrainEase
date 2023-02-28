@@ -1,4 +1,4 @@
-package com.example.trainease;
+package com.example.trainease.model;
 
 public class Profil {
     private int code_profil;

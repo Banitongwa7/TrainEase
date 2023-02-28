@@ -1,4 +1,4 @@
-package com.example.trainease;
+package com.example.trainease.model;
 
 import java.util.Date;
 

@@ -4,30 +4,30 @@ create table domaine
 (
     code_domaine int auto_increment
         primary key,
-    libelle      multilinestring null
+    libelle      text null
 );
 
 create table formateur
 (
-    nom            linestring null,
-    prenom         linestring null,
+    nom            char(250) null,
+    prenom         char(250) null,
     code_formateur int auto_increment
         primary key,
-    email          linestring not null,
-    telephone      int        null
+    email          char(250) not null,
+    telephone      int       null
 );
 
 create table formation
 (
     code_formation      int auto_increment
         primary key,
-    intitule            linestring null,
-    nombre_jours        int        null,
-    annee               int        null,
-    mois                int        null,
-    nombre_participants int        null,
-    code_formateur      int        null,
-    code_domaine        int        null,
+    intitule            text null,
+    nombre_jours        int  null,
+    annee               int  null,
+    mois                int  null,
+    nombre_participants int  null,
+    code_formateur      int  null,
+    code_domaine        int  null,
     constraint formation_domaine_null_fk
         foreign key (code_domaine) references domaine (code_domaine),
     constraint formation_formateur_null_fk
@@ -38,17 +38,17 @@ create table profil
 (
     code_profil int auto_increment
         primary key,
-    libelle     multilinestring null
+    libelle     text null
 );
 
 create table participant
 (
     matricule_participant int auto_increment
         primary key,
-    nom                   linestring null,
-    prenom                linestring null,
-    date_naissance        date       null,
-    code_profil           int        null,
+    nom                   char(250) null,
+    prenom                char(250) null,
+    date_naissance        date      null,
+    code_profil           int       null,
     constraint participant_profil_fk
         foreign key (code_profil) references profil (code_profil)
 );
@@ -69,17 +69,19 @@ create table role
 (
     code_role int auto_increment
         primary key,
-    libelle   linestring null
+    libelle   text null
 );
 
 create table utilisateur
 (
-    code_utilisateur int             not null
+    code_utilisateur int       not null
         primary key,
-    email            linestring      not null,
-    password         multilinestring not null,
-    code_role        int             not null,
+    email            char(250) not null,
+    password         text      not null,
+    code_role        int       not null,
     constraint utilisateur_role_fk
         foreign key (code_role) references role (code_role)
 );
+
+
 

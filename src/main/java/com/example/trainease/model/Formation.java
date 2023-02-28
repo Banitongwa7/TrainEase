@@ -1,4 +1,4 @@
-package com.example.trainease;
+package com.example.trainease.model;
 
 public class Formation {
     private int code_formation;

@@ -1,4 +1,4 @@
-package com.example.trainease;
+package com.example.trainease.model;
 
 public class Domaine {
     private int code_domaine;
