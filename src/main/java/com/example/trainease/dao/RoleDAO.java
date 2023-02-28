@@ -94,7 +94,6 @@ public class RoleDAO {
             System.out.println("Role non ajouté");
         }
 
-
     }
 
 }
