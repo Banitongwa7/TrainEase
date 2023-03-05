@@ -65,7 +65,7 @@ public class ProfilDAO {
         return profils;
     }
 
-    public Boolean deleteProfil(int code_profil) {
+    public boolean deleteProfil(int code_profil) {
         String sql = "DELETE FROM profil WHERE code_profil = ?";
         try {
             ps = DatabaseConnect.getConnection().prepareStatement(sql);
