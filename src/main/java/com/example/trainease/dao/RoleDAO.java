@@ -82,18 +82,20 @@ public class RoleDAO {
         return role;
     }
 
-    public static void main(String[] args) {
-        RoleDAO roleDAO = new RoleDAO();
-        Role role = new Role();
-        role.setLibelle("Administrateur");
-        Boolean result = roleDAO.addRole(role);
-
-        if(result) {
-            System.out.println("Role ajouté");
-        }else {
-            System.out.println("Role non ajouté");
+    public int updatRole(Role role){
+        String sql = "UPDATE role SET libelle = ? WHERE code_role = ?";
+        try {
+            ps = DatabaseConnect.getConnection().prepareStatement(sql);
+            ps.setString(1, role.getLibelle());
+            ps.setInt(2, role.getCode_role());
+            ps.executeUpdate();
+            // Success update
+            return 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
+        // Erreur d'update
+        return 0;
     }
 
 }
