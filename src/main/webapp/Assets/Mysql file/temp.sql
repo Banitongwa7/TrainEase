@@ -1,5 +1,3 @@
-CREATE DATABASE `trainease`; /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
-
 create table domaine
 (
     code_domaine int auto_increment
@@ -82,6 +80,4 @@ create table utilisateur
     constraint utilisateur_role_fk
         foreign key (code_role) references role (code_role)
 );
-
-
 

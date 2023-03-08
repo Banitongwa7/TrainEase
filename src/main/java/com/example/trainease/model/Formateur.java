@@ -1,7 +1,7 @@
-package com.example.trainease;
+package com.example.trainease.model;
 
 public class Formateur {
-    private int id;
+    private int code_formateur;
     private String nom;
     private String prenom;
     private String email;
@@ -11,20 +11,19 @@ public class Formateur {
 
     }
 
-    public Formateur(int id, String nom, String prenom, String email, String phone) {
-        this.id = id;
+    public Formateur(String nom, String prenom, String email, String phone) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.phone = phone;
     }
 
-    public int getId() {
-        return id;
+    public int getCode_formateur() {
+        return code_formateur;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCode_formateur(int code_formateur) {
+        this.code_formateur = code_formateur;
     }
 
     public String getNom() {
