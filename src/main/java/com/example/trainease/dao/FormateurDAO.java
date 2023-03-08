@@ -1,5 +1,10 @@
 package com.example.trainease.dao;
 
-public class FormateurDAO {
+import com.example.trainease.model.Formateur;
 
+import java.sql.PreparedStatement;
+
+public class FormateurDAO {
+    private Formateur formateur;
+    private PreparedStatement ps;
 }
