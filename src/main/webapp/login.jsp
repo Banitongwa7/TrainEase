@@ -25,8 +25,8 @@
     
     <form action="/login" method="post">
       <div class="form-group">
-        <label for="username">Nom d'utilisateur:</label>
-        <input type="text" class="form-control" id="username" placeholder="Entrez votre nom d utilisateur" name="username">
+        <label for="username">Email:</label>
+        <input type="email" class="form-control" id="username" placeholder="Entrez votre adresse email" name="email">
       </div>
       <div class="form-group">
         <label for="password">Mot de passe:</label>
