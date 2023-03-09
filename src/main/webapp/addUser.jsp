@@ -30,7 +30,7 @@
 	
 	<div class="container mt-5">
         
-        <form action="#" method="post">
+        <form action="ServletAddUser" method="post">
             <div class="form-group">
                 <label for="username">Nom d'utilisateur</label>
                 <input type="text" class="form-control" id="username" name="username">
@@ -43,12 +43,12 @@
 				<label for="role">Role :</label>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="role" id="admin"
-						value="ROLE_ADMIN"> <label class="form-check-label"
+						value="Administrateur"> <label class="form-check-label"
 						for="role1"> Administrateur </label>
 				</div>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="role" id="user"
-						value="ROLE_USER"> <label class="form-check-label"
+						value="Simple Utilisateur"> <label class="form-check-label"
 						for="role2"> Simple Utilisateur </label>
 				</div>
 			</div>

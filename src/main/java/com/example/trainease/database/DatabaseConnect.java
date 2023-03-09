@@ -19,5 +19,4 @@ public class DatabaseConnect {
         }
         return connection;
     }
-
 }
