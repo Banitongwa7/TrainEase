@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +15,7 @@
 	<div class="container text-center">
 		<div class="row align-items-center ">
 			<div class="col-sm-4">
-				<img src="assets/img/TrainEaseLogo.png"
+				<img src="Assets/img/TrainEaseLogo.png"
 					class="position-relative mx-auto d-block img-fluid w-50 float-left">
 
 			</div>
@@ -41,7 +40,7 @@
                 <input type="password" class="form-control" id="password" name="password">
             </div>
 			<div class="form-group">
-				<label for="role">Rôle :</label>
+				<label for="role">Role :</label>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="role" id="admin"
 						value="ROLE_ADMIN"> <label class="form-check-label"
