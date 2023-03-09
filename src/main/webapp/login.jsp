@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +13,7 @@
 </head>
 <body>
   <div class="container text-center">
-    <img src="assets/img/TrainEaseLogo.png" class="position-relative" style="top: 0; left: 0; right: 0; margin: auto;">
+    <img src="Assets/img/TrainEaseLogo.png" alt="logo TrainEase" class="position-relative" style="top: 0; left: 0; right: 0; margin: auto;">
   </div>  
   <div class="container text-center">
     <h2 class="mt-5" style="color: #008ad3;">Connexion</h2>
@@ -26,8 +25,8 @@
     
     <form action="login" method="post">
       <div class="form-group">
-        <label for="username">Nom d'utilisateur:</label>
-        <input type="text" class="form-control" id="username" placeholder="Entrez votre nom d'utilisateur" name="username">
+        <label for="username">Nom d utilisateur:</label>
+        <input type="text" class="form-control" id="username" placeholder="Entrez votre nom d utilisateur" name="username">
       </div>
       <div class="form-group">
         <label for="password">Mot de passe:</label>
