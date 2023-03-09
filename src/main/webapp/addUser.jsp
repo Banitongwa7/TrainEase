@@ -6,8 +6,7 @@
 <meta charset="UTF-8">
 <title>Ajouter un utilisateur</title>
 <!-- Inclure les fichiers CSS de Bootstrap -->
-<link href='https://fonts.googleapis.com/css?family=Nunito'
-	rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -19,6 +18,7 @@
 			<div class="col-sm-4">
 				<img src="assets/img/TrainEaseLogo.png"
 					class="position-relative mx-auto d-block img-fluid w-50 float-left">
+
 			</div>
 			<div class="col-sm-8">
 				<h1 class="text-center float-left" style="color: #008ad3;">Ajouter un utilisateur</h1>
@@ -31,7 +31,7 @@
 	
 	<div class="container mt-5">
         
-        <form action="AddUserServlet" method="post">
+        <form action="#" method="post">
             <div class="form-group">
                 <label for="username">Nom d'utilisateur</label>
                 <input type="text" class="form-control" id="username" name="username">
