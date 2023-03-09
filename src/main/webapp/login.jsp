@@ -23,9 +23,9 @@
       </div>
     <% } %>
     
-    <form action="login" method="post">
+    <form action="/login" method="post">
       <div class="form-group">
-        <label for="username">Nom d utilisateur:</label>
+        <label for="username">Nom d'utilisateur:</label>
         <input type="text" class="form-control" id="username" placeholder="Entrez votre nom d utilisateur" name="username">
       </div>
       <div class="form-group">

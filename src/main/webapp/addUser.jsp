@@ -5,16 +5,13 @@
 <meta charset="UTF-8">
 <title>Ajouter un utilisateur</title>
 <!-- Inclure les fichiers CSS de Bootstrap -->
-<link href='https://fonts.googleapis.com/css?family=Nunito'
-	rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
 </head>
 <body>
-
-
 <!-- header -->
 
 
@@ -32,8 +29,6 @@
         </div>
     </div>
 </div>
-
-
 	
 	
 	<!-- navbar -->
@@ -50,7 +45,7 @@
 	
 	<div class="container mt-5">
         
-        <form action="AddUserServlet" method="post">
+        <form action="ServletAddUser" method="post">
             <div class="form-group">
                 <label for="username">Nom d'utilisateur</label>
                 <input type="text" class="form-control" id="username" name="username">
@@ -74,12 +69,12 @@
 				<label for="role">Role :</label>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="role" id="admin"
-						value="ROLE_ADMIN"> <label class="form-check-label"
+						value="Administrateur"> <label class="form-check-label"
 						for="role1"> Administrateur </label>
 				</div>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="role" id="user"
-						value="ROLE_USER"> <label class="form-check-label"
+						value="Simple Utilisateur"> <label class="form-check-label"
 						for="role2"> Simple Utilisateur </label>
 				</div>
 			</div>

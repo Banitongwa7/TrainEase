@@ -32,7 +32,7 @@ public class UtilisateurDAO {
 
     public Utilisateur getUserForLogin(String email, String password){
         String sql = "SELECT * FROM utilisateur WHERE email = ? AND password = ? ";
-
+        user = new Utilisateur();
         try {
             ps = DatabaseConnect.getConnection().prepareStatement(sql);
             ps.setString(1, email);
@@ -46,8 +46,7 @@ public class UtilisateurDAO {
             }else {
                 return null;
             }
-        }
-        catch (Exception e) {
+        }catch (Exception e) {
             e.printStackTrace();
         }
         return user;
@@ -61,7 +60,7 @@ public class UtilisateurDAO {
             ResultSet rs = ps.executeQuery();
             users = new ArrayList<>();
             while (rs.next()) {
-                Utilisateur user = new Utilisateur();
+                user = new Utilisateur();
                 user.setCode_utilisateur(rs.getInt("code_utilisateur"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
