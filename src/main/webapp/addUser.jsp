@@ -13,20 +13,40 @@
     crossorigin="anonymous">
 </head>
 <body>
-	<div class="container text-center">
-		<div class="row align-items-center ">
-			<div class="col-sm-4">
-				<img src="Assets/img/TrainEaseLogo.png"
-					class="position-relative mx-auto d-block img-fluid w-50 float-left">
-			</div>
-			<div class="col-sm-8">
-				<h1 class="text-center float-left" style="color: #008ad3;">Ajouter un utilisateur</h1>
-			</div>
-		</div>
-	</div>
+
+
+<!-- header -->
+
+
+
+<div class="container text-center">
+    <div class="row align-items-center">
+        <div class="col-sm-3 mt-3">
+            <img src="Assets/img/TrainEaseLogo.png"
+                 class="position-relative mx-auto d-block img-fluid w-50 float-left">
+        </div>
+        <div class="col-sm-9">
+            <div class="d-inline-block border-left pl-3">
+                <h1 class="text-center float-left" style="color: #008ad3;">Ajouter des participants</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 	
 	
-	
+	<!-- navbar -->
+
+
+	    <div class="navbar mt-3" style="text-align: center; margin: 0 auto;">
+            <%@ include file="navbar.jsp" %>
+        </div>
+
+
+
+    <!-- Ajout des participants -->
+
 	
 	<div class="container mt-5">
         
@@ -39,6 +59,17 @@
                 <label for="password">Mot de passe</label>
                 <input type="password" class="form-control" id="password" name="password">
             </div>
+
+            <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" name="nom">
+            </div>
+
+            <div class="form-group">
+                                        <label for="organisation">Organisation</label>
+                                        <input type="text" class="form-control" id="organisation" name="organisation">
+            </div>
+
 			<div class="form-group">
 				<label for="role">Role :</label>
 				<div class="form-check">
