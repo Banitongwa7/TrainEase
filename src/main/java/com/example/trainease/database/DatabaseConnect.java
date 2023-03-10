@@ -1,4 +1,4 @@
-package com.example.trainease;
+package com.example.trainease.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,5 +19,4 @@ public class DatabaseConnect {
         }
         return connection;
     }
-
 }
