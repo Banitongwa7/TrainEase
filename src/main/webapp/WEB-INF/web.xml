@@ -61,5 +61,19 @@
 
 
 
+<<<<<<< HEAD
+=======
+	<servlet>
+		<servlet-name>formationServlet</servlet-name>
+		<jsp-file>/formation.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formationServlet</servlet-name>
+		<url-pattern>/formation</url-pattern>
+	</servlet-mapping>
+
+
+
+>>>>>>> mehdi-branch
 
 </web-app>
