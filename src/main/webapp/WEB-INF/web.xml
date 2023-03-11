@@ -48,4 +48,32 @@
 		<url-pattern>/profil</url-pattern>
 	</servlet-mapping>
 
+
+
+	<servlet>
+		<servlet-name>addCourseServlet</servlet-name>
+		<jsp-file>/addCourse.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addCourseServlet</servlet-name>
+		<url-pattern>/addCourse</url-pattern>
+	</servlet-mapping>
+
+
+
+<<<<<<< HEAD
+=======
+	<servlet>
+		<servlet-name>formationServlet</servlet-name>
+		<jsp-file>/formation.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formationServlet</servlet-name>
+		<url-pattern>/formation</url-pattern>
+	</servlet-mapping>
+
+
+
+>>>>>>> mehdi-branch
+
 </web-app>
