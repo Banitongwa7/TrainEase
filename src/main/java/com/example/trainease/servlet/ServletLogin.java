@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletLogin", value = "/ServletLogin")
+@WebServlet(name = "ServletLogin", urlPatterns = "/ServletLogin")
 public class ServletLogin extends HttpServlet {
 
 
