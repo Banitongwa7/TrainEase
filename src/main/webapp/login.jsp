@@ -25,15 +25,16 @@
     
     <form action="ServletLogin" method="post">
       <div class="form-group">
-        <label for="username">Email:</label>
-        <input type="text" class="form-control" id="username" placeholder="Entrez votre adresse email" name="email">
+        <label for="username">Email</label>
+        <input type="email" class="form-control" id="username" placeholder="Entrez votre adresse email" name="email">
       </div>
       <div class="form-group">
-        <label for="password">Mot de passe:</label>
+        <label for="password">Mot de passe</label>
         <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" name="password">
       </div>
       <button type="submit" class="btn btn-primary">Connexion</button>
     </form>
+    <a href="addUser.jsp" class="btn btn-primary">Ajouter utilisateur</a>
   </div>
 </body>
 </html>

@@ -2,13 +2,15 @@ package com.example.trainease.servlet;
 
 import com.example.trainease.dao.RoleDAO;
 import com.example.trainease.dao.UtilisateurDAO;
+import com.example.trainease.model.Role;
+import com.example.trainease.model.Utilisateur;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "ServletAddUser", value = "/ServletAddUser")
+@WebServlet(name = "ServletAddUser", urlPatterns = "/ServletAddUser")
 public class ServletAddUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -18,12 +20,27 @@ public class ServletAddUser extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = (String) request.getParameter("email");
+        String email = (String) request.getParameter("email");
         String password = (String) request.getParameter("password");
-        String role = (String) request.getParameter("role");
+        String libelle = (String) request.getParameter("role");
         UtilisateurDAO daoUser = new UtilisateurDAO();
         RoleDAO daoRole = new RoleDAO();
+        Utilisateur user = new Utilisateur();
+        Role r = daoRole.getRoleWithLibelle(libelle);
 
-        response.sendRedirect("addUser.jsp");
+        // user
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setCode_role(r.getCode_role());
+
+        // add user
+        boolean checkAdd = daoUser.addUser(user);
+
+        if (checkAdd) {
+            response.sendRedirect("login.jsp");
+        }else {
+            response.sendRedirect("addUser.jsp");
+        }
+
     }
 }
