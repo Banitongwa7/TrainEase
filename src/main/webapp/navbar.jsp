@@ -21,7 +21,7 @@
 	        <a class="nav-link" href="#" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#" style="font-size: 15px;">Participants</a>
+	        <a class="nav-link" href="/UsersList" style="font-size: 15px;">Participants</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="#" style="font-size: 15px;">Formations</a>

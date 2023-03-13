@@ -71,6 +71,26 @@
 	</servlet-mapping>
 
 
+	<servlet>
+		<servlet-name>formateurProfilServlet</servlet-name>
+		<jsp-file>/formateurProfil.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formateurProfilServlet</servlet-name>
+		<url-pattern>/formateurProfil</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>homeServlet</servlet-name>
+		<jsp-file>/Home.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>homeServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+
+
 
 
 </web-app>
