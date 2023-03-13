@@ -31,7 +31,7 @@ public class ServletLogin extends HttpServlet {
         if(user != null){
             HttpSession session = request.getSession();
             session.setAttribute("username", email);
-            response.sendRedirect("welcome.jsp");
+            response.sendRedirect("home.jsp");
         }else{
             response.sendRedirect("login.jsp");
         }

@@ -34,7 +34,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Connexion</button>
     </form>
-    <a href="addUser.jsp" class="btn btn-primary">Ajouter utilisateur</a>
+
   </div>
 </body>
 </html>

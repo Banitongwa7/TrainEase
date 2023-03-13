@@ -11,7 +11,11 @@
 		<welcome-file>login.jsp</welcome-file>
 	</welcome-file-list>
 
+<<<<<<< HEAD
 	<!-- Servlet Mapping -->
+=======
+
+>>>>>>> mehdi-branch
 	<servlet>
 		<servlet-name>ServletLogin</servlet-name>
 		<servlet-class>com.example.trainease.servlet.ServletLogin</servlet-class>
@@ -72,5 +76,32 @@
 		<servlet-name>formationServlet</servlet-name>
 		<url-pattern>/formation</url-pattern>
 	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>formateurProfilServlet</servlet-name>
+		<jsp-file>/formateurProfil.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>formateurProfilServlet</servlet-name>
+		<url-pattern>/formateurProfil</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>homeServlet</servlet-name>
+		<jsp-file>/Home.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>homeServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
 
 </web-app>
