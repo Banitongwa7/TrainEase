@@ -62,12 +62,32 @@ public class RoleDAO {
         return false;
     }
 
-    public Role getRole(int code_role){
+    public Role getRoleCode(int code_role){
         String sql = "SELECT * FROM role WHERE code_role = ?";
         role = new Role();
         try {
             ps = DatabaseConnect.getConnection().prepareStatement(sql);
             ps.setInt(1, code_role);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                role.setCode_role(rs.getInt("code_role"));
+                role.setLibelle(rs.getString("libelle"));
+            }else {
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return role;
+    }
+
+    public Role getRoleWithLibelle(String libelle){
+        String sql = "SELECT * FROM role WHERE libelle = ?";
+        role = new Role();
+        try {
+            ps = DatabaseConnect.getConnection().prepareStatement(sql);
+            ps.setString(1, libelle);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 role.setCode_role(rs.getInt("code_role"));
