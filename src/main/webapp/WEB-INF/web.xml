@@ -11,7 +11,7 @@
 		<welcome-file>login.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- Servlet Mapping
+
 	<servlet>
 		<servlet-name>ServletLogin</servlet-name>
 		<servlet-class>com.example.trainease.servlet.ServletLogin</servlet-class>
@@ -68,7 +68,7 @@
 		<servlet-name>formationServlet</servlet-name>
 		<url-pattern>/formation</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
+
 
 
 	<servlet>
@@ -93,7 +93,5 @@
 
 
 
-=======
--->
->>>>>>> a12257c9334725211b7336dc375f85cca0a03fcd
+
 </web-app>
