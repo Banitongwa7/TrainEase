@@ -21,13 +21,13 @@
 	        <a class="nav-link" href="#" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="/UsersList" style="font-size: 15px;">Participants</a>
+	        <a class="nav-link" href="UsersList.jsp" style="font-size: 15px;">Participants</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#" style="font-size: 15px;">Formations</a>
+	        <a class="nav-link" href="formation.jsp" style="font-size: 15px;">Formations</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#" style="font-size: 15px;">Profil</a>
+	        <a class="nav-link" href="profil.jsp" style="font-size: 15px;">Profil</a>
 	      </li>
 	      <li class="nav-item">
           	        <a class="nav-link" href="#" style="font-size: 15px;">Contact</a>

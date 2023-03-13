@@ -72,7 +72,7 @@
 
 	<div class="container text-center">
 
-	    <h3 style="color: #008ad3;"> Bienvenue !</h3>
+	    <h3 style="color: #008ad3;"> Bienvenue <%=session.getAttribute("email") %> !</h3>
 
 		<div class="row">
         			<div class="col-sm-4">
@@ -139,7 +139,7 @@
                         				</div>
                         			</div>
                         		</div>
-		<a href="deconnexion.jsp" class="btn btn-danger">Déconnexion</a>
+		<a href="login.jsp" class="btn btn-danger">Déconnexion</a>
 	</div>
 </body>
 </html>

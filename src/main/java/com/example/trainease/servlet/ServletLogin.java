@@ -30,8 +30,8 @@ public class ServletLogin extends HttpServlet {
        // check username and password
         if(user != null){
             HttpSession session = request.getSession();
-            session.setAttribute("username", email);
-            response.sendRedirect("home.jsp");
+            session.setAttribute("email", email);
+            response.sendRedirect("Home.jsp");
         }else{
             response.sendRedirect("login.jsp");
         }

@@ -10,12 +10,7 @@
 	<welcome-file-list>
 		<welcome-file>login.jsp</welcome-file>
 	</welcome-file-list>
-
-<<<<<<< HEAD
-	<!-- Servlet Mapping -->
-=======
-
->>>>>>> mehdi-branch
+	<!--
 	<servlet>
 		<servlet-name>ServletLogin</servlet-name>
 		<servlet-class>com.example.trainease.servlet.ServletLogin</servlet-class>
@@ -100,8 +95,6 @@
 	</servlet-mapping>
 
 
-
-
-
+-->
 
 </web-app>
