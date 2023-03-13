@@ -14,7 +14,7 @@
 <body>
   <div class="container text-center">
     <img src="Assets/img/TrainEaseLogo.png" alt="logo TrainEase" class="position-relative" style="top: 0; left: 0; right: 0; margin: auto;">
-  </div>  
+  </div>
   <div class="container text-center">
     <h2 class="mt-5" style="color: #008ad3;">Connexion</h2>
     <% if (request.getAttribute("error") != null) { %>
@@ -23,17 +23,18 @@
       </div>
     <% } %>
     
-    <form action="/login" method="post">
+    <form action="ServletLogin" method="post">
       <div class="form-group">
-        <label for="username">Nom d'utilisateur:</label>
-        <input type="text" class="form-control" id="username" placeholder="Entrez votre nom d utilisateur" name="username">
+        <label for="username">Email</label>
+        <input type="email" class="form-control" id="username" placeholder="Entrez votre adresse email" name="email">
       </div>
       <div class="form-group">
-        <label for="password">Mot de passe:</label>
+        <label for="password">Mot de passe</label>
         <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" name="password">
       </div>
       <button type="submit" class="btn btn-primary">Connexion</button>
     </form>
+    <a href="addUser.jsp" class="btn btn-primary">Ajouter utilisateur</a>
   </div>
 </body>
 </html>

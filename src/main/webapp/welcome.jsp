@@ -10,7 +10,11 @@
 <head>
     <title>Welcome</title>
 </head>
+
 <body>
-<h2>Welcome User</h2>
+
+    <h2>Welcome User</h2>
+
 </body>
+
 </html>

@@ -47,22 +47,13 @@
         
         <form action="ServletAddUser" method="post">
             <div class="form-group">
-                <label for="username">Nom d'utilisateur</label>
-                <input type="text" class="form-control" id="username" name="username">
+                <label for="username">Email</label>
+                <input type="text" class="form-control" id="username" name="email">
             </div>
+
             <div class="form-group">
                 <label for="password">Mot de passe</label>
                 <input type="password" class="form-control" id="password" name="password">
-            </div>
-
-            <div class="form-group">
-                            <label for="nom">Nom</label>
-                            <input type="text" class="form-control" id="nom" name="nom">
-            </div>
-
-            <div class="form-group">
-                                        <label for="organisation">Organisation</label>
-                                        <input type="text" class="form-control" id="organisation" name="organisation">
             </div>
 
 			<div class="form-group">

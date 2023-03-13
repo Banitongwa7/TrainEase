@@ -22,11 +22,11 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>addUserServlet</servlet-name>
+		<servlet-name>ServletAddUser</servlet-name>
 		<jsp-file>/addUser.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>addUserServlet</servlet-name>
+		<servlet-name>ServletAddUser</servlet-name>
 		<url-pattern>/addUser</url-pattern>
 	</servlet-mapping>
 
@@ -62,6 +62,8 @@
 
 
 
+
+
 	<servlet>
 		<servlet-name>formationServlet</servlet-name>
 		<jsp-file>/formation.jsp</jsp-file>
@@ -70,9 +72,5 @@
 		<servlet-name>formationServlet</servlet-name>
 		<url-pattern>/formation</url-pattern>
 	</servlet-mapping>
-
-
-
-
 
 </web-app>
