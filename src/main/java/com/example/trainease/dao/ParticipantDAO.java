@@ -108,4 +108,19 @@ public class ParticipantDAO {
         }
         return participants;
     }
+
+    public int getNbParticipant() {
+        String sql = "SELECT COUNT(*) FROM participant";
+        int nbParticipant = 0;
+        try {
+            ps = DatabaseConnect.getConnection().prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                nbParticipant = rs.getInt(1);
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nbParticipant;
+    }
 }

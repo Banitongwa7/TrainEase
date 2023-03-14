@@ -1,5 +1,6 @@
+<%@ page import="java.util.Map" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+		 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,12 +75,16 @@
 
 	    <h3 style="color: #008ad3;"> Bienvenue <%=session.getAttribute("email") %> !</h3>
 
+		<%
+			Map<String, Integer> data = (Map<String, Integer>) request.getAttribute("data");
+		%>
+
 		<div class="row">
         			<div class="col-sm-4">
         				<div class="card">
         					<div class="card-header" style="color: #008ad3;">Formateurs</div>
         					<div class="card-body">
-        						<p>Nombre de formateurs : ${nb_formateurs}</p>
+        						<p>Nombre de formateurs : <%= data.get("nbFormateur") %></p>
         						<a href="liste_formateurs.jsp" class="btn btn-primary">Liste des formateurs</a>
         					</div>
         				</div>
@@ -88,7 +93,7 @@
         				<div class="card">
         					<div class="card-header" style="color: #008ad3;">Participants</div>
         					<div class="card-body">
-        						<p>Nombre de participants : ${nb_participants}</p>
+        						<p>Nombre de participants : <%= data.get("nbParticipant") %></p>
         						<a href="liste_participants.jsp" class="btn btn-primary">Liste des participants</a>
         					</div>
         				</div>
@@ -97,7 +102,7 @@
         				<div class="card">
         					<div class="card-header" style="color: #008ad3;">Formations</div>
         					<div class="card-body">
-        						<p>Nombre de formations : ${nb_formations}</p>
+        						<p>Nombre de formations : <%= data.get("nbFormation") %></p>
         						<a href="liste_formations.jsp" class="btn btn-primary">Liste des formations</a>
         					</div>
         				</div>
@@ -111,8 +116,8 @@
                         				<div class="card">
                         					<div class="card-header" style="color: #008ad3;">Formateurs</div>
                         					<div class="card-body">
-                        						<p>Formateurs Actif : 10 ${nb_formateurs}</p>
-                        						<p>Formateurs Inactif : 15 ${nb_formateurs}</p>
+                        						<p>Formateurs Actif : 10 </p>
+                        						<p>Formateurs Inactif : 15</p>
 
 
                         					</div>
@@ -122,8 +127,8 @@
                         				<div class="card">
                         					<div class="card-header" style="color: #008ad3;">Participants</div>
                         					<div class="card-body">
-                        						<p>Participants Actif : 122 ${nb_participants}</p>
-                        						<p>Participants Inactif: 31 ${nb_participants}</p>
+                        						<p>Participants Actif : 122 </p>
+                        						<p>Participants Inactif: 31</p>
 
                         					</div>
                         				</div>
@@ -132,8 +137,8 @@
                         				<div class="card">
                         					<div class="card-header" style="color: #008ad3;">Formations</div>
                         					<div class="card-body">
-                        						<p>Formations Actif : 5 ${nb_formations}</p>
-                        						<p>Formations Inactif : 16 ${nb_formations}</p>
+                        						<p>Formations Actif : 5</p>
+                        						<p>Formations Inactif : 16</p>
 
                         					</div>
                         				</div>
