@@ -51,21 +51,50 @@
 		<!-- Formulaire pour ajouter une formation -->
 		<form action="ajouterFormationServlet" method="post">
 			<div class="form-group">
-				<label for="nomFormation">Nom de la formation:</label>
+				<label for="nomFormation">Intitulé :</label>
 				<input type="text" class="form-control" id="nomFormation" name="nomFormation" required>
 			</div>
 			<div class="form-group">
-				<label for="dateDebut">Date de début:</label>
-				<input type="date" class="form-control" id="dateDebut" name="dateDebut" required>
+				<label for="daynumber">Nombre de jours :</label>
+				<input type="number" class="form-control" id="daynumber" name="daynumber" required>
 			</div>
 			<div class="form-group">
-				<label for="dateFin">Date de fin:</label>
-				<input type="date" class="form-control" id="dateFin" name="dateFin" required>
+				<label for="year">L'année :</label>
+				<input type="number" class="form-control" id="year" name="year" required>
 			</div>
 			<div class="form-group">
-				<label for="lieu">Lieu:</label>
-				<input type="text" class="form-control" id="lieu" name="lieu" required>
+				<label for="month">Le mois :</label>
+				<input type="text" class="form-control" id="month" name="month" required>
 			</div>
+
+			<div class="form-group">
+				<label for="formateur">Formateur :</label>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="role" id="admin"
+						   value="Administrateur"> <label class="form-check-label"
+														  for="role1"> Administrateur </label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="role" id="user"
+						   value="Simple Utilisateur"> <label class="form-check-label"
+															  for="role2"> Simple Utilisateur </label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="domaine">Domaine :</label>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="role" id="admin"
+						   value="Administrateur"> <label class="form-check-label"
+														  for="role1"> Administrateur </label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="role" id="user"
+						   value="Simple Utilisateur"> <label class="form-check-label"
+															  for="role2"> Simple Utilisateur </label>
+				</div>
+			</div>
+
 			<button type="submit" class="btn btn-primary">Ajouter</button>
 		</form>
 	</div>
