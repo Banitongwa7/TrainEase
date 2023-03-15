@@ -106,4 +106,18 @@ public class FormateurDAO {
         }
         return formateurs;
     }
+
+    public int getNbFormateur() {
+        String sql = "SELECT COUNT(*) FROM formateur";
+        try{
+            ps = DatabaseConnect.getConnection().prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

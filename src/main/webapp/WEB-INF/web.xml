@@ -12,7 +12,10 @@
 	</welcome-file-list>
 
 
+
 	<!-- Servlet Mapping -->
+
+
 
 
 
@@ -98,8 +101,6 @@
 		<servlet-name>homeServlet</servlet-name>
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
-
-
 
 
 

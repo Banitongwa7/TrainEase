@@ -115,4 +115,18 @@ public class FormationDAO {
         }
         return formations;
     }
+
+    public int getNbFormation() {
+        String sql = "SELECT COUNT(*) FROM formation";
+        try {
+            ps = DatabaseConnect.getConnection().prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }
