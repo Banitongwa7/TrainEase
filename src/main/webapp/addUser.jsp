@@ -24,7 +24,7 @@
         </div>
         <div class="col-sm-9">
             <div class="d-inline-block border-left pl-3">
-                <h1 class="text-center float-left" style="color: #008ad3;">Ajouter des participants</h1>
+                <h1 class="text-center float-left" style="color: #008ad3;">Ajouter des utilisateurs</h1>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
 
 
 
-    <!-- Ajout des participants -->
+    <!-- Ajout des utilisateurs -->
 
 	
 	<div class="container mt-5">

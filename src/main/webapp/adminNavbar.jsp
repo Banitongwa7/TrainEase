@@ -24,7 +24,10 @@
 	        <a class="nav-link" href="liste_participants.jsp" style="font-size: 15px;">Participants</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="liste_formations.jsp" style="font-size: 15px;">Formations</a>
+          	        <a class="nav-link" href="UsersList.jsp" style="font-size: 15px;">Utilisateurs</a>
+          </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="liste_formation.jsp" style="font-size: 15px;">Formations</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="profil.jsp" style="font-size: 15px;">Profil</a>
