@@ -10,7 +10,15 @@
 	<welcome-file-list>
 		<welcome-file>login.jsp</welcome-file>
 	</welcome-file-list>
-	<!--
+
+
+
+	<!-- Servlet Mapping
+
+
+
+
+
 	<servlet>
 		<servlet-name>ServletLogin</servlet-name>
 		<servlet-class>com.example.trainease.servlet.ServletLogin</servlet-class>
@@ -95,6 +103,35 @@
 	</servlet-mapping>
 
 
+	<servlet>
+		<servlet-name>liste_participantsServlet</servlet-name>
+		<jsp-file>/liste_participants.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>liste_participantsServlet</servlet-name>
+		<url-pattern>/liste_participants</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>liste_formateursServlet</servlet-name>
+		<jsp-file>/liste_formateurs.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>liste_formateursServlet</servlet-name>
+		<url-pattern>/liste_formateurs</url-pattern>
+	</servlet-mapping>
+
+	liste_formations
+
+	<servlet>
+		<servlet-name>liste_formationsServlet</servlet-name>
+		<jsp-file>/liste_formations.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>liste_formationsServlet</servlet-name>
+		<url-pattern>/liste_formations</url-pattern>
+	</servlet-mapping>
 -->
 
 </web-app>
