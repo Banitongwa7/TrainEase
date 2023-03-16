@@ -1,5 +1,7 @@
+<%@ page import="com.example.trainease.model.Formateur" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+		 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,10 +51,10 @@
 	<div class="container">
 		<h1>Ajouter une formation</h1>
 		<!-- Formulaire pour ajouter une formation -->
-		<form action="ajouterFormationServlet" method="post">
+		<form action="ServletAddCourse" method="post">
 			<div class="form-group">
-				<label for="nomFormation">Intitulé :</label>
-				<input type="text" class="form-control" id="nomFormation" name="nomFormation" required>
+				<label for="intitule">Intitulé :</label>
+				<input type="text" class="form-control" id="intitule" name="intitule" required>
 			</div>
 			<div class="form-group">
 				<label for="daynumber">Nombre de jours :</label>
@@ -68,28 +70,25 @@
 			</div>
 
 			<div class="form-group">
-				<label for="formateur">Formateur :</label>
+				<label for="formateur">Formateur : </label>
+				<% List<Formateur> formateurs = (List<Formateur>) request.getAttribute("formateurs"); %>
+				<% for( Formateur f : formateurs){ %>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="role" id="admin"
-						   value="Administrateur"> <label class="form-check-label"
-														  for="role1"> Administrateur </label>
+					<input class="form-check-input" type="radio" name="formateur" id="formateur" value="add"> <label class="form-check-label" for="formateur"><%=f.getNom()%></label>
 				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="role" id="user"
-						   value="Simple Utilisateur"> <label class="form-check-label"
-															  for="role2"> Simple Utilisateur </label>
-				</div>
+				<%}%>
+
 			</div>
 
 			<div class="form-group">
 				<label for="domaine">Domaine :</label>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="role" id="admin"
+					<input class="form-check-input" type="radio" name="domaine" id="admin"
 						   value="Administrateur"> <label class="form-check-label"
 														  for="role1"> Administrateur </label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="role" id="user"
+					<input class="form-check-input" type="radio" name="domaine" id="user"
 						   value="Simple Utilisateur"> <label class="form-check-label"
 															  for="role2"> Simple Utilisateur </label>
 				</div>
