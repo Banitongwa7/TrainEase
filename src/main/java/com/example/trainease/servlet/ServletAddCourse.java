@@ -11,18 +11,18 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ServletAddCourse", value = "/ServletAddCourse")
+@WebServlet(name = "ServletAddCourse", urlPatterns = "/ServletAddCourse")
 public class ServletAddCourse extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         FormateurDAO formateurDAO = new FormateurDAO();
         DomaineDAO domaineDAO = new DomaineDAO();
 
-        //List<Formateur> formateurs = formateurDAO.getAllFormateurs();
-        //List<Domaine> domaine = domaineDAO.getAllDomaine();
+        List<Formateur> formateurs = formateurDAO.getAllFormateurs();
+        List<Domaine> domaine = domaineDAO.getAllDomaine();
 
-        request.setAttribute("formateurs", "Hello les gens");
-        //request.setAttribute("domaine", domaine);
+       request.setAttribute("domaine", domaine);
+       request.setAttribute("formateurs", formateurs);
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addCourse.jsp");
         dispatcher.forward(request, response);

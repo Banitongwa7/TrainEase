@@ -21,7 +21,7 @@
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col-sm-3 mt-3">
-            <img src="Assets/img/TrainEaseLogo.png"
+            <img src="assets/img/TrainEaseLogo.png"
                  class="position-relative mx-auto d-block img-fluid w-50 float-left">
         </div>
         <div class="col-sm-9">
@@ -71,12 +71,12 @@
 
 			<div class="form-group">
 				<label for="formateur">Formateur : </label>
-				<% List<Formateur> formateurs = (List<Formateur>) request.getAttribute("formateurs"); %>
-				<% for( Formateur f : formateurs){ %>
+				<% List<Formateur> f = (List<Formateur>) request.getAttribute("formateurs"); %>
+				<% for(Formateur form : f){ %>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="formateur" id="formateur" value="add"> <label class="form-check-label" for="formateur"><%=f.getNom()%></label>
+					<input class="form-check-input" type="radio" name="formateur" id="formateur" value="add"> <label class="form-check-label" for="formateur"><%= form.getNom() %></label>
 				</div>
-				<%}%>
+				<% } %>
 
 			</div>
 
