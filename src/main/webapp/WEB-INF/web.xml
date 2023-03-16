@@ -13,7 +13,7 @@
 
 
 
-	<!-- Servlet Mapping -->
+	<!-- Servlet Mapping
 
 
 
@@ -132,6 +132,6 @@
 		<servlet-name>liste_formationsServlet</servlet-name>
 		<url-pattern>/liste_formations</url-pattern>
 	</servlet-mapping>
-
+-->
 
 </web-app>

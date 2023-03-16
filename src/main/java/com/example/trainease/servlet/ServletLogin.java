@@ -22,8 +22,7 @@ public class ServletLogin extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
-        dispatcher.forward(request, response);
+
     }
 
     @Override
@@ -53,7 +52,7 @@ public class ServletLogin extends HttpServlet {
             session.setAttribute("email", email);
             // statistique
             request.setAttribute("data", dictionnaire);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/Home.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Home.jsp");
             dispatcher.forward(request, response);
             // redirect
             response.sendRedirect("Home.jsp");
