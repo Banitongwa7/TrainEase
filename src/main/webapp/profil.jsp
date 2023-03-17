@@ -25,7 +25,7 @@
 <div class="container text-center">
 		<div class="row align-items-center">
 			<div class="col-sm-3 mt-3">
-				<img src="Assets/img/TrainEaseLogo.png" class="position-relative mx-auto d-block img-fluid w-50 float-left img-3d">
+				<img src="assets/img/TrainEaseLogo.png" class="position-relative mx-auto d-block img-fluid w-50 float-left img-3d">
 			</div>
 			<div class="col-sm-9">
 				<div class="d-inline-block border-left pl-3">
@@ -57,7 +57,7 @@
       <div class="col-md-4">
         <!-- Informations sur le participant -->
         <h2 style="color: #008ad3;">Profil de Hammami</h2>
-        <img src="Assets/img/mehdi.png" alt="Image de profil" class="img-responsive">
+        <%--<img src="assets/img/mehdi.png" alt="Image de profil" class="img-responsive">--%>
         <p><strong>Nom:</strong> Hammami</p>
         <p><strong>Prenom:</strong> Mehdi</p>
         <p><strong>Organisation:</strong> Biware </p>

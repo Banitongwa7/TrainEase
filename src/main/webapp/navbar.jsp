@@ -18,7 +18,7 @@
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 	      <li class="nav-item active">
-	        <a class="nav-link" href="#" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
+	        <a class="nav-link" href="ServletHome" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Participants</a>
@@ -27,7 +27,7 @@
 	        <a class="nav-link" href="ServletFormation" style="font-size: 15px;">Formations</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="profil.jsp" style="font-size: 15px;">Profil</a>
+	        <a class="nav-link" href="ServletProfil" style="font-size: 15px;">Profil</a>
 	      </li>
 	    </ul>
 	  </div>
