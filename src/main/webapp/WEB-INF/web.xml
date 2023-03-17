@@ -134,4 +134,14 @@
 	</servlet-mapping>
 -->
 
+	<servlet>
+		<servlet-name>addParticipantServlet</servlet-name>
+		<jsp-file>/addParticipant.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addParticipantServlet</servlet-name>
+		<url-pattern>/addParticipant</url-pattern>
+	</servlet-mapping>
+
+
 </web-app>
