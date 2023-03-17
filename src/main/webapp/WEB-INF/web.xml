@@ -8,7 +8,7 @@
 
 	<!-- Login page -->
 	<welcome-file-list>
-		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>ServletLogin</welcome-file>
 	</welcome-file-list>
 
 

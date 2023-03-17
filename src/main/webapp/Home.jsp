@@ -47,7 +47,7 @@
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col-sm-3 mt-3">
-            <img src="Assets/img/TrainEaseLogo.png"
+            <img src="assets/img/TrainEaseLogo.png"
                  class="position-relative mx-auto d-block img-fluid w-50 float-left">
         </div>
         <div class="col-sm-9">
@@ -144,7 +144,7 @@
                         				</div>
                         			</div>
                         		</div>
-		<a href="login.jsp" class="btn btn-danger">Déconnexion</a>
+		<a href="ServletLogin" class="btn btn-danger">Déconnexion</a>
 	</div>
 </body>
 </html>

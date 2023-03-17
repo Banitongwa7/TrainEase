@@ -1,3 +1,6 @@
+<%@ page import="com.example.trainease.model.Formation" %>
+<%@ page import="java.util.List" %>
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,11 +28,11 @@
 <div class="container text-center">
 		<div class="row align-items-center">
 			<div class="col-sm-3 mt-3">
-				<img src="Assets/img/TrainEaseLogo.png" class="position-relative mx-auto d-block img-fluid w-50 float-left img-3d">
+				<img src="assets/img/TrainEaseLogo.png" class="position-relative mx-auto d-block img-fluid w-50 float-left img-3d">
 			</div>
 			<div class="col-sm-9">
 				<div class="d-inline-block border-left pl-3">
-					<h1 class="text-center float-left" style="color: #008ad3;">liste des formations</span></h1>
+					<h1 class="text-center float-left" style="color: #008ad3;">liste des formations</h1>
 				</div>
 		    </div>
 	    </div>
@@ -58,34 +61,31 @@
       <div class="col-md-8">
         <!-- Formations du participant -->
         <h2 style="color: #008ad3;">Liste des Formations</h2>
+        <button type="button" class="btn btn-success">Ajouter une formation</button>
         <table class="table">
           <thead>
             <tr>
-              <th>Nom de la formation</th>
-              <th>Date de debut</th>
-              <th>Date de fin</th>
-              <th>Nombre d heures</th>
+              <th>Intitulé</th>
+              <th>Nombre de jours</th>
+              <th>Année</th>
+              <th>Mois</th>
+              <th>Nombre de participants</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
+          <% List<Formation> formations = (List<Formation>) request.getAttribute("formations"); %>
+            <% for(Formation f : formations) { %>
             <tr>
-              <td>Formation en developpement web</td>
-              <td>01/01/2022</td>
-              <td>31/01/2022</td>
-              <td>60 heures</td>
+              <td><%= f.getIntitule() %></td>
+              <td><%= f.getNombre_jours() %></td>
+              <td><%= f.getAnnee() %></td>
+              <td><%= f.getMois() %></td>
+              <td><%= f.getNombre_participants() %></td>
+              <td><button type="button" class="btn btn-danger">Supprimer</button></td>
             </tr>
-            <tr>
-              <td>Formation en Power BI</td>
-              <td>01/02/2022</td>
-              <td>28/02/2022</td>
-              <td>40 heures</td>
-            </tr>
-            <tr>
-              <td>Formation en Azure Cloud</td>
-              <td>01/03/2022</td>
-              <td>31/03/2022</td>
-              <td>30 heures</td>
-            </tr>
+          <% } %>
+
           </tbody>
         </table>
       </div>

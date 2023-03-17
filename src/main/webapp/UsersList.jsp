@@ -1,5 +1,6 @@
+<%@ page import="com.example.trainease.model.Participant" %>
+<%@ page import="java.util.List" %>
 <%@ page pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,7 @@
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col-sm-3 mt-3">
-            <img src="Assets/img/TrainEaseLogo.png"
+            <img src="assets/img/TrainEaseLogo.png"
                  class="position-relative mx-auto d-block img-fluid w-50 float-left">
         </div>
         <div class="col-sm-9">
@@ -52,22 +53,26 @@
 
     <div class="container">
         <h1>Liste des participants</h1>
+        <button type="button" class="btn btn-success">Ajouter un participant</button>
         <table class="table table-striped mt-3">
             <thead>
                 <tr>
-                    <th style="color: #008ad3;">ID</th>
                     <th style="color: #008ad3;">Nom</th>
-                    <th style="color: #008ad3;">Email</th>
+                    <th style="color: #008ad3;">Prénom</th>
+                    <th style="color: #008ad3;">Date de naissance</th>
+                    <th style="color: #008ad3;">Action</th>
                 </tr>
             </thead>
             <tbody>
-                <c:forEach items="${users}" var="user">
+            <% List<Participant> participant = (List<Participant>) request.getAttribute("participants"); %>
+            <% for( Participant p : participant ) { %>
                     <tr>
-                        <td>${user.id}</td>
-                        <td>${user.nom}</td>
-                        <td>${user.email}</td>
+                        <td><%= p.getNom() %></td>
+                        <td><%= p.getPrenom() %></td>
+                        <td><%= p.getDate_naissance() %></td>
+                        <td><button type="button" class="btn btn-danger">Supprimer</button> </td>
                     </tr>
-                </c:forEach>
+<% } %>
             </tbody>
         </table>
     </div>

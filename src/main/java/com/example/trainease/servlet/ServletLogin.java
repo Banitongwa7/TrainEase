@@ -22,7 +22,8 @@ public class ServletLogin extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override
@@ -31,33 +32,17 @@ public class ServletLogin extends HttpServlet {
         String password = (String) request.getParameter("password");
         UtilisateurDAO dao = new UtilisateurDAO();
         Utilisateur user = dao.getUserForLogin(email, password);
-        // statistique
-        FormationDAO daoFormation = new FormationDAO();
-        FormateurDAO daoFormateur = new FormateurDAO();
-        ParticipantDAO daoParticipant = new ParticipantDAO();
-        // number
-        int nbFormation = daoFormation.getNbFormation();
-        int nbFormateur = daoFormateur.getNbFormateur();
-        int nbParticipant = daoParticipant.getNbParticipant();
-        // dictionnaire
-        Map<String, Integer> dictionnaire = new HashMap<>();
-
-        dictionnaire.put("nbFormation", nbFormation);
-        dictionnaire.put("nbFormateur", nbFormateur);
-        dictionnaire.put("nbParticipant", nbParticipant);
 
        // check username and password
         if(user != null){
+
             HttpSession session = request.getSession();
             session.setAttribute("email", email);
-            // statistique
-            request.setAttribute("data", dictionnaire);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Home.jsp");
-            dispatcher.forward(request, response);
+
             // redirect
-            response.sendRedirect("Home.jsp");
+            response.sendRedirect("ServletHome");
         }else{
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("ServletLogin");
         }
     }
 }
