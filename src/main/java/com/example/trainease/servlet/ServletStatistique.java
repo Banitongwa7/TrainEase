@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "ServletStatistique", value = "/ServletStatistique")
+@WebServlet(name = "ServletStatistique", urlPatterns = "/ServletStatistique")
 public class ServletStatistique extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

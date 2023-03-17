@@ -1,5 +1,6 @@
 <%@ page import="com.example.trainease.model.Formateur" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.trainease.model.Domaine" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col-sm-3 mt-3">
-            <img src="Assets/img/TrainEaseLogo.png"
+            <img src="assets/img/TrainEaseLogo.png"
                  class="position-relative mx-auto d-block img-fluid w-50 float-left">
         </div>
         <div class="col-sm-9">
@@ -61,37 +62,41 @@
 				<input type="number" class="form-control" id="daynumber" name="daynumber" required>
 			</div>
 			<div class="form-group">
+				<label for="numberparticipant">Nombre de participant : </label>
+				<input type="number" class="form-control" id="numberparticipant" name="numberparticipant" required>
+			</div>
+			<div class="form-group">
 				<label for="year">L'année :</label>
 				<input type="number" class="form-control" id="year" name="year" required>
 			</div>
 			<div class="form-group">
 				<label for="month">Le mois :</label>
-				<input type="text" class="form-control" id="month" name="month" required>
+				<input type="number" class="form-control" id="month" name="month" required>
 			</div>
 
 			<div class="form-group">
 				<label for="formateur">Formateur : </label>
-				<% List<Formateur> formateurs = (List<Formateur>) request.getAttribute("formateurs"); %>
-				<% for( Formateur f : formateurs){ %>
+
+				<%
+					List<Formateur> f = (List<Formateur>) request.getAttribute("formateurs");
+					List<Domaine> d = (List<Domaine>) request.getAttribute("domaine");
+				%>
+
+				<% for(Formateur form : f) { %>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="formateur" id="formateur" value="add"> <label class="form-check-label" for="formateur"><%=f.getNom()%></label>
+					<input class="form-check-input" type="radio" name="formateur" id="formateur" value="<%=form.getCode_formateur()%>"> <label class="form-check-label" for="formateur"><%= form.getNom() %></label>
 				</div>
-				<%}%>
+				<% } %>
 
 			</div>
 
 			<div class="form-group">
 				<label for="domaine">Domaine :</label>
+				<% for(Domaine dom : d) { %>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="domaine" id="admin"
-						   value="Administrateur"> <label class="form-check-label"
-														  for="role1"> Administrateur </label>
+					<input class="form-check-input" type="radio" name="domaine" id="domaine" value="<%= dom.getCode_domaine() %>"> <label class="form-check-label" for="domaine"> <%= dom.getLibelle() %> </label>
 				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="domaine" id="user"
-						   value="Simple Utilisateur"> <label class="form-check-label"
-															  for="role2"> Simple Utilisateur </label>
-				</div>
+				<% } %>
 			</div>
 
 			<button type="submit" class="btn btn-primary">Ajouter</button>

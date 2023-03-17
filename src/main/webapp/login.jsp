@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="container text-center">
-    <img src="./Assets/img/TrainEaseLogo.png" alt="logo TrainEase" class="position-relative" style="top: 0; left: 0; right: 0; margin: auto;">
+    <img src="assets/img/TrainEaseLogo.png" alt="logo TrainEase" class="position-relative" style="top: 0; left: 0; right: 0; margin: auto;">
   </div>
   <div class="container text-center">
     <h2 class="mt-5" style="color: #008ad3;">Connexion</h2>
