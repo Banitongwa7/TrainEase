@@ -1,5 +1,6 @@
 <%@ page import="com.example.trainease.model.Formateur" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.trainease.model.Domaine" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -61,20 +62,29 @@
 				<input type="number" class="form-control" id="daynumber" name="daynumber" required>
 			</div>
 			<div class="form-group">
+				<label for="numberparticipant">Nombre de participant : </label>
+				<input type="number" class="form-control" id="numberparticipant" name="numberparticipant" required>
+			</div>
+			<div class="form-group">
 				<label for="year">L'année :</label>
 				<input type="number" class="form-control" id="year" name="year" required>
 			</div>
 			<div class="form-group">
 				<label for="month">Le mois :</label>
-				<input type="text" class="form-control" id="month" name="month" required>
+				<input type="number" class="form-control" id="month" name="month" required>
 			</div>
 
 			<div class="form-group">
 				<label for="formateur">Formateur : </label>
-				<% List<Formateur> f = (List<Formateur>) request.getAttribute("formateurs"); %>
-				<% for(Formateur form : f){ %>
+
+				<%
+					List<Formateur> f = (List<Formateur>) request.getAttribute("formateurs");
+					List<Domaine> d = (List<Domaine>) request.getAttribute("domaine");
+				%>
+
+				<% for(Formateur form : f) { %>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="formateur" id="formateur" value="add"> <label class="form-check-label" for="formateur"><%= form.getNom() %></label>
+					<input class="form-check-input" type="radio" name="formateur" id="formateur" value="<%=form.getCode_formateur()%>"> <label class="form-check-label" for="formateur"><%= form.getNom() %></label>
 				</div>
 				<% } %>
 
@@ -82,16 +92,11 @@
 
 			<div class="form-group">
 				<label for="domaine">Domaine :</label>
+				<% for(Domaine dom : d) { %>
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="domaine" id="admin"
-						   value="Administrateur"> <label class="form-check-label"
-														  for="role1"> Administrateur </label>
+					<input class="form-check-input" type="radio" name="domaine" id="domaine" value="<%= dom.getCode_domaine() %>"> <label class="form-check-label" for="domaine"> <%= dom.getLibelle() %> </label>
 				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="domaine" id="user"
-						   value="Simple Utilisateur"> <label class="form-check-label"
-															  for="role2"> Simple Utilisateur </label>
-				</div>
+				<% } %>
 			</div>
 
 			<button type="submit" class="btn btn-primary">Ajouter</button>
