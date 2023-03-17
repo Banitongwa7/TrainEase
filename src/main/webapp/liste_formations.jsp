@@ -51,46 +51,57 @@
 
 <hr class="my-4">
 
-
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-8">
-        <!-- Formations du participant -->
-        <h2 style="color: #008ad3;">Liste des Formations</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Nom de la formation</th>
-              <th>Date de debut</th>
-              <th>Date de fin</th>
-              <th>Nombre d heures</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Formation en developpement web</td>
-              <td>01/01/2022</td>
-              <td>31/01/2022</td>
-              <td>60 heures</td>
-            </tr>
-            <tr>
-              <td>Formation en Power BI</td>
-              <td>01/02/2022</td>
-              <td>28/02/2022</td>
-              <td>40 heures</td>
-            </tr>
-            <tr>
-              <td>Formation en Azure Cloud</td>
-              <td>01/03/2022</td>
-              <td>31/03/2022</td>
-              <td>30 heures</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 style="color: #008ad3;">Liste des Formations</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nom de la formation</th>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+            <th>Nombre d'heures</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Formation en développement web</td>
+            <td>01/01/2022</td>
+            <td>31/01/2022</td>
+            <td>60 heures</td>
+            <td>
+              <button type="button" class="btn btn-primary">Edit</button>
+              <button type="button" class="btn btn-danger">Supprimer</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Formation en Power BI</td>
+            <td>01/02/2022</td>
+            <td>28/02/2022</td>
+            <td>40 heures</td>
+            <td>
+              <button type="button" class="btn btn-primary">Edit</button>
+              <button type="button" class="btn btn-danger">Supprimer</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Formation en Azure Cloud</td>
+            <td>01/03/2022</td>
+            <td>31/03/2022</td>
+            <td>30 heures</td>
+            <td>
+              <button type="button" class="btn btn-primary">Edit</button>
+              <button type="button" class="btn btn-danger">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
+</div>
+
 
   <!-- Liens vers les fichiers JavaScript de Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -99,3 +110,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 </body>
 </html>
+

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Formation</title>
+  <title>Partcipants</title>
   <!-- Inclure les fichiers Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -52,31 +52,36 @@
 			</div>
 			<div class="card-body">
 				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th style="color: #008ad3;">Nom</th>
-							<th style="color: #008ad3;">Adresse e-mail</th>
-							<th style="color: #008ad3;">Telephone</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>David Banitongwa</td>
-							<td>example@example.com</td>
-							<td>1234567890</td>
-						</tr>
-						<tr>
-							<td>Moutii Marzouki</td>
-							<td>example@example.com</td>
-							<td>0987654321</td>
-						</tr>
-					</tbody>
-					<tr>
-                    							<td>Hammami Mehdi</td>
-                    							<td>example@example.com</td>
-                    							<td>0987654321</td>
-                    						</tr>
-				</table>
+                  <thead>
+                    <tr>
+                      <th style="color: #008ad3;">Nom</th>
+                      <th style="color: #008ad3;">Adresse e-mail</th>
+                      <th style="color: #008ad3;">Telephone</th>
+                      <th style="color: #008ad3;">Actions</th> <!-- Ajout de la colonne pour les actions -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>David Banitongwa</td>
+                      <td>example@example.com</td>
+                      <td>1234567890</td>
+                      <td> <!-- Ajout des boutons d'édition et de suppression -->
+                        <a href="#" class="btn btn-primary">Editer</a>
+                        <a href="#" class="btn btn-danger">Supprimer</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Moutii Marzouki</td>
+                      <td>example@example.com</td>
+                      <td>0987654321</td>
+                      <td>
+                        <a href="#" class="btn btn-primary">Editer</a>
+                        <a href="#" class="btn btn-danger">Supprimer</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
 			</div>
 		</div>
 
