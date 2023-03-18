@@ -99,7 +99,11 @@
 				<% } %>
 			</div>
 
-			<button type="submit" class="btn btn-primary">Ajouter</button>
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary">Ajouter</button>
+				<a href="ServletFormation" class="btn btn-secondary">Annuler</a>
+			</div>
+
 		</form>
 	</div>
 	<!-- Ajouter les liens vers les fichiers JavaScript de Bootstrap -->

@@ -1,19 +1,19 @@
 package com.example.trainease.model;
 
-import java.util.Date;
+import java.lang.String;
 
 public class Participant {
     private int matricule_participant;
     private String nom;
     private String prenom;
-    private Date date_naissance;
+    private String date_naissance;
     private int code_profil;
 
     public Participant(){
 
     }
 
-    public Participant(String nom, String prenom, Date date_naissance, int code_profil) {
+    public Participant(String nom, String prenom, String date_naissance, int code_profil) {
         this.nom = nom;
         this.prenom = prenom;
         this.date_naissance = date_naissance;
@@ -44,11 +44,11 @@ public class Participant {
         this.prenom = prenom;
     }
 
-    public Date getDate_naissance() {
+    public String getDate_naissance() {
         return date_naissance;
     }
 
-    public void setDate_naissance(Date date_naissance) {
+    public void setDate_naissance(String date_naissance) {
         this.date_naissance = date_naissance;
     }
 

@@ -20,7 +20,7 @@ public class ParticipantDAO {
             ps = DatabaseConnect.getConnection().prepareStatement(sql);
             ps.setString(1, participant.getNom());
             ps.setString(2, participant.getPrenom());
-            ps.setDate(3, (Date) participant.getDate_naissance());
+            ps.setString(3, participant.getDate_naissance());
             ps.setInt(4, participant.getCode_profil());
             ps.executeUpdate();
             return true;
@@ -43,7 +43,7 @@ public class ParticipantDAO {
                 participant.setMatricule_participant(rs.getInt("matricule_participant"));
                 participant.setNom(rs.getString("nom"));
                 participant.setPrenom(rs.getString("prenom"));
-                participant.setDate_naissance(rs.getDate("date_naissance"));
+                participant.setDate_naissance(rs.getString("date_naissance"));
                 participant.setCode_profil(rs.getInt("code_profil"));
             }else {
                 return null;
@@ -76,7 +76,7 @@ public class ParticipantDAO {
             ps = DatabaseConnect.getConnection().prepareStatement(sql);
             ps.setString(1, participant.getNom());
             ps.setString(2, participant.getPrenom());
-            ps.setDate(3, (Date) participant.getDate_naissance());
+            ps.setString(3, participant.getDate_naissance());
             ps.setInt(4, participant.getCode_profil());
             ps.setInt(5, participant.getMatricule_participant());
             ps.executeUpdate();
@@ -99,7 +99,7 @@ public class ParticipantDAO {
                 participant.setMatricule_participant(rs.getInt("matricule_participant"));
                 participant.setNom(rs.getString("nom"));
                 participant.setPrenom(rs.getString("prenom"));
-                participant.setDate_naissance(rs.getDate("date_naissance"));
+                participant.setDate_naissance(rs.getString("date_naissance"));
                 participant.setCode_profil(rs.getInt("code_profil"));
                 participants.add(participant);
             }

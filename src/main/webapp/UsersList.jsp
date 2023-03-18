@@ -28,7 +28,7 @@
         </div>
         <div class="col-sm-9">
             <div class="d-inline-block border-left pl-3">
-                <h1 class="text-center float-left" style="color: #008ad3;">Liste des utilisateurs</h1>
+                <h1 class="text-center float-left" style="color: #008ad3;">Liste des participants</h1>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
 
 
     <div class="navbar mt-3">
-            <%@ include file="adminNavbar.jsp" %>
+            <%@ include file="navbar.jsp" %>
     </div>
 
 
@@ -53,7 +53,7 @@
 
     <div class="container">
         <h1>Liste des participants</h1>
-        <button type="button" class="btn btn-success">Ajouter un participant</button>
+        <a href="ServletAddParticipant" class="btn btn-success">Ajouter un participant</a>
         <table class="table table-striped mt-3">
             <thead>
                 <tr>
@@ -70,7 +70,12 @@
                         <td><%= p.getNom() %></td>
                         <td><%= p.getPrenom() %></td>
                         <td><%= p.getDate_naissance() %></td>
-                        <td><button type="button" class="btn btn-danger">Supprimer</button> </td>
+                        <td>
+                            <form action="ServletDeleteParticipant" method="post">
+                                <input type="hidden" name="id_row" value="<%= p.getMatricule_participant() %>">
+                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                            </form>
+                        </td>
                     </tr>
 <% } %>
             </tbody>
