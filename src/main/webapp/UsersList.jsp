@@ -28,7 +28,7 @@
         </div>
         <div class="col-sm-9">
             <div class="d-inline-block border-left pl-3">
-                <h1 class="text-center float-left" style="color: #008ad3;">Liste des participants</h1>
+                <h1 class="text-center float-left" style="color: #008ad3;">Liste des utilisateurs</h1>
             </div>
         </div>
     </div>
@@ -42,12 +42,12 @@
 
 
     <div class="navbar mt-3">
-            <%@ include file="navbar.jsp" %>
+            <%@ include file="adminNavbar.jsp" %>
     </div>
 
 
 
-<!-- liste des participants -->
+<!-- liste des utilisateurs -->
 
 
 
