@@ -71,6 +71,10 @@
                         <td><%= p.getPrenom() %></td>
                         <td><%= p.getDate_naissance() %></td>
                         <td>
+                            <form action="#" method="post">
+                                <input type="hidden" name="id_row" value="<%= p.getMatricule_participant() %>">
+                                <button type="submit" class="btn btn-primary">Modifier</button>
+                            </form>
                             <form action="ServletDeleteParticipant" method="post">
                                 <input type="hidden" name="id_row" value="<%= p.getMatricule_participant() %>">
                                 <button type="submit" class="btn btn-danger">Supprimer</button>

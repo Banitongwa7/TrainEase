@@ -26,8 +26,11 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="ServletFormation" style="font-size: 15px;">Formations</a>
 	      </li>
+			<li class="nav-item">
+				<a class="nav-link" href="ServletFormateur" style="font-size: 15px;">Formateurs</a>
+			</li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="ServletProfil" style="font-size: 15px;">Profil</a>
+	        <a class="nav-link" href="ServletProfil" style="font-size: 15px;">Mon Profil</a>
 	      </li>
 	    </ul>
 	  </div>

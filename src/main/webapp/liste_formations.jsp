@@ -82,10 +82,15 @@
               <td><%= f.getMois() %></td>
               <td><%= f.getNombre_participants() %></td>
               <td>
-                  <form action="ServletDeleteCourse" method="post">
-                      <input type="hidden" name="id_row" value="<%= f.getCode_formation() %>">
-                      <button type="submit" class="btn btn-danger">Supprimer</button>
-                  </form>
+                <form action="#" method="post">
+                  <input type="hidden" name="id_row" value="<%= f.getCode_formation() %>">
+                  <button type="submit" class="btn btn-primary">Modifier</button>
+                </form>
+
+                <form action="ServletDeleteCourse" method="post">
+                    <input type="hidden" name="id_row" value="<%= f.getCode_formation() %>">
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
               </td>
             </tr>
           <% } %>
