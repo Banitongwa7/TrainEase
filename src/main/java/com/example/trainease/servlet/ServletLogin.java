@@ -1,10 +1,8 @@
 package com.example.trainease.servlet;
 
-import com.example.trainease.dao.FormateurDAO;
-import com.example.trainease.dao.FormationDAO;
-import com.example.trainease.dao.ParticipantDAO;
-import com.example.trainease.dao.UtilisateurDAO;
+import com.example.trainease.dao.*;
 import com.example.trainease.database.DatabaseConnect;
+import com.example.trainease.model.Role;
 import com.example.trainease.model.Utilisateur;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -32,12 +30,15 @@ public class ServletLogin extends HttpServlet {
         String password = (String) request.getParameter("password");
         UtilisateurDAO dao = new UtilisateurDAO();
         Utilisateur user = dao.getUserForLogin(email, password);
+        RoleDAO roledao = new RoleDAO();
+        Role role = roledao.getRoleCode(user.getCode_role());
 
        // check username and password
         if(user != null){
 
             HttpSession session = request.getSession();
-            session.setAttribute("email", email);
+            session.setAttribute("email", user.getEmail());
+            session.setAttribute("role", role.getLibelle());
 
             // redirect
             response.sendRedirect("ServletHome");

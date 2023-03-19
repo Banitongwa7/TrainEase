@@ -56,11 +56,9 @@
     <div class="row">
       <div class="col-md-4">
         <!-- Informations sur le participant -->
-        <h2 style="color: #008ad3;">Profil de Hammami</h2>
+        <h2 style="color: #008ad3;">Profil de <%=session.getAttribute("email") %></h2>
         <%--<img src="assets/img/mehdi.png" alt="Image de profil" class="img-responsive">--%>
-        <p><strong>Nom:</strong> Hammami</p>
-        <p><strong>Prenom:</strong> Mehdi</p>
-        <p><strong>Organisation:</strong> Biware </p>
+        <p><strong>Profil : </strong> <%=session.getAttribute("role") %></p>
       </div>
       <div class="col-md-8">
         <!-- Formations du participant -->

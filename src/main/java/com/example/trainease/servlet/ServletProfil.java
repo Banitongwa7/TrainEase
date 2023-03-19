@@ -11,8 +11,6 @@ import java.io.IOException;
 public class ServletProfil extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProfilDAO profilDAO = new ProfilDAO();
-        request.setAttribute("profils", profilDAO.getAllProfil());
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/profil.jsp");
         dispatcher.forward(request, response);

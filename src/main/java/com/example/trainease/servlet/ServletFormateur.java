@@ -7,10 +7,11 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "ServletFormateur", value = "/ServletFormateur")
+@WebServlet(name = "ServletFormateur", urlPatterns = "/ServletFormateur")
 public class ServletFormateur extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         FormateurDAO formateurDAO = new FormateurDAO();
         request.setAttribute("formateurs", formateurDAO.getAllFormateurs());
 
