@@ -35,7 +35,7 @@
 
 
 	    <div class="navbar mt-3 d-flex justify-content-center" style="text-align: center; margin: 0 auto;">
-            <%@ include file="navbar.jsp" %>
+            <%@ include file="adminNavbar.jsp" %>
         </div>
 
 

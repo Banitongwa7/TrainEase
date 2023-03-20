@@ -21,7 +21,7 @@
 				<a class="nav-link" href="ServletHome" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="ServletAddUser" style="font-size: 15px;">Utilisateurs</a>
+				<a class="nav-link" href="ServletUtilisateurs" style="font-size: 15px;">Utilisateurs</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Participants</a>

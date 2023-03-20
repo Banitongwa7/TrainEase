@@ -82,6 +82,24 @@ public class RoleDAO {
         return role;
     }
 
+    public String getRoleOfLibelle(int code_role){
+        String sql = "SELECT * FROM role WHERE code_role = ?";
+        String libelle = "";
+        try {
+            ps = DatabaseConnect.getConnection().prepareStatement(sql);
+            ps.setInt(1, code_role);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                libelle = rs.getString("libelle");
+            }else {
+                return null;
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return libelle;
+    }
+
     public Role getRoleWithLibelle(String libelle){
         String sql = "SELECT * FROM role WHERE libelle = ?";
         role = new Role();

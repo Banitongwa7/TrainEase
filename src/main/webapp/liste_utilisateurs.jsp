@@ -1,5 +1,7 @@
 <%@ page import="com.example.trainease.model.Formateur" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.trainease.model.Utilisateur" %>
+<%@ page import="com.example.trainease.dao.RoleDAO" %>
 <%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -29,11 +31,7 @@
 
 <!-- navbar -->
 <div class="navbar mt-3 d-flex align-items-center justify-content-center">
-  <% if (session.getAttribute("role").equals("Administrateur")) {%>
     <%@ include file="adminNavbar.jsp" %>
-  <% } else { %>
-    <%@ include file="navbar.jsp" %>
-  <% } %>
 </div>
 
 <div class="container">
@@ -41,34 +39,35 @@
   <div class="card mt-4">
     <div class="card-header" style="color: #008ad3;">
       <strong>Liste des formateurs</strong>
-      <a href="ServletAddFormateur" class="btn btn-success">Ajouter un formateur</a>
+      <a href="ServletAddUser" class="btn btn-success">Ajouter un utilisateur</a>
     </div>
     <div class="card-body">
       <table class="table table-striped">
         <thead>
         <tr>
-          <th style="color: #008ad3;">Nom</th>
-          <th style="color: #008ad3;">Prenom</th>
           <th style="color: #008ad3;">E-mail</th>
-          <th style="color: #008ad3;">Téléphone</th>
+          <th style="color: #008ad3;">Rôle</th>
           <th style="color: #008ad3;">Actions</th>
         </tr>
         </thead>
         <tbody>
-        <% List<Formateur> formateurs = (List<Formateur>) request.getAttribute("formateurs"); %>
-        <% for(Formateur f : formateurs) { %>
+        <%
+
+          List<Utilisateur> utili = (List<Utilisateur>) request.getAttribute("utilisateurs");
+          RoleDAO roledao = new RoleDAO();
+
+        %>
+        <% for(Utilisateur user : utili) { %>
         <tr>
-          <td><%= f.getNom() %></td>
-          <td><%= f.getPrenom() %></td>
-          <td><%= f.getEmail() %></td>
-          <td><%= f.getPhone() %></td>
+          <td><%= user.getEmail() %></td>
+          <td><%= roledao.getRoleOfLibelle(user.getCode_role()) %></td>
           <td>
             <form action="#" method="post">
               <input type="hidden" name="id_row" value="">
               <button type="submit" class="btn btn-primary">Modifier</button>
             </form>
 
-            <form action="ServletDeleteCourse" method="post">
+            <form action="ServletDeleteUtilisateur" method="post">
               <input type="hidden" name="id_row" value="">
               <button class="btn btn-sm btn-danger delete-button">Supprimer</button>
             </form>
