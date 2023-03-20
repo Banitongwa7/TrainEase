@@ -66,10 +66,6 @@
 				<input type="number" class="form-control" id="daynumber" name="daynumber" required>
 			</div>
 			<div class="form-group">
-				<label for="numberparticipant">Nombre de participant : </label>
-				<input type="number" class="form-control" id="numberparticipant" name="numberparticipant" required>
-			</div>
-			<div class="form-group">
 				<label for="year">L'année :</label>
 				<input type="number" class="form-control" id="year" name="year" required>
 			</div>

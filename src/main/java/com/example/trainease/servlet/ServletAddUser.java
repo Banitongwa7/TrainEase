@@ -37,7 +37,7 @@ public class ServletAddUser extends HttpServlet {
         boolean checkAdd = daoUser.addUser(user);
 
         if (checkAdd) {
-            response.sendRedirect("ServletHome");
+            response.sendRedirect("ServletAddUser");
         }else {
             request.setAttribute("error", "Une erreur est survenue lors de l'ajout de l'utilisateur");
             response.sendRedirect("ServletAddUser");

@@ -37,7 +37,6 @@ public class ServletAddCourse extends HttpServlet {
 
         String intitule = request.getParameter("intitule");
         int daynumber = Integer.parseInt(request.getParameter("daynumber"));
-        int participant = Integer.parseInt(request.getParameter("numberparticipant"));
         int month = Integer.parseInt(request.getParameter("month"));
         int year = Integer.parseInt(request.getParameter("year"));
         int idFormateur = Integer.parseInt(request.getParameter("formateur"));
@@ -45,7 +44,6 @@ public class ServletAddCourse extends HttpServlet {
 
         formation.setIntitule(intitule);
         formation.setNombre_jours(daynumber);
-        formation.setNombre_participants(participant);
         formation.setMois(month);
         formation.setAnnee(year);
         formation.setCode_formateur(idFormateur);

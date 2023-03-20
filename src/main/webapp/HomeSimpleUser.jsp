@@ -81,7 +81,7 @@
                 <div class="card-header" style="color: #008ad3;">Formateurs</div>
                 <div class="card-body">
                     <p>Nombre de formateurs : <%= data.get("nbFormateur") %></p>
-                    <a href="liste_formateurs.jsp" class="btn btn-primary">Liste des formateurs</a>
+                    <a href="ServletFormateur" class="btn btn-primary">Liste des formateurs</a>
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
                 <div class="card-header" style="color: #008ad3;">Participants</div>
                 <div class="card-body">
                     <p>Nombre de participants : <%= data.get("nbParticipant") %></p>
-                    <a href="liste_participants.jsp" class="btn btn-primary">Liste des participants</a>
+                    <a href="ServletUsersList" class="btn btn-primary">Liste des participants</a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
                 <div class="card-header" style="color: #008ad3;">Formations</div>
                 <div class="card-body">
                     <p>Nombre de formations : <%= data.get("nbFormation") %></p>
-                    <a href="liste_formations.jsp" class="btn btn-primary">Liste des formations</a>
+                    <a href="ServletFormation" class="btn btn-primary">Liste des formations</a>
                 </div>
             </div>
         </div>

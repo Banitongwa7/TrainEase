@@ -61,15 +61,20 @@
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="role" id="admin"
 						value="Administrateur"> <label class="form-check-label"
-						for="role1"> Administrateur </label>
+						for="admin"> Administrateur </label>
 				</div>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="role" id="user"
 						value="Simple Utilisateur"> <label class="form-check-label"
-						for="role2"> Simple Utilisateur </label>
+						for="user"> Simple Utilisateur </label>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary">Ajouter</button>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+                <a href="ServletUtilisateurs" class="btn btn-secondary">Annuler</a>
+            </div>
+
         </form>
     </div>
     <!-- Inclure les fichiers JavaScript de Bootstrap -->

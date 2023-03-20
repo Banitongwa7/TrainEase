@@ -19,6 +19,9 @@
 	      <li class="nav-item active">
 	        <a class="nav-link" href="ServletHome" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
 	      </li>
+			<li class="nav-item">
+				<a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Inscriptions</a>
+			</li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Participants</a>
 	      </li>
