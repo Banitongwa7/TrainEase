@@ -1,5 +1,7 @@
 <%@ page import="com.example.trainease.model.Formation" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="com.example.trainease.model.Participant" %>
 <%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -63,38 +65,40 @@
 
     <div class="col-md-8">
       <!-- Formations du participant -->
-      <h2 style="color: #008ad3;">Liste des Formations</h2>
-      <a href="ServletAddCourse" class="btn btn-success">Ajouter une formation</a>
+      <h2 style="color: #008ad3;">Liste des inscriptions</h2>
+      <a href="ServletAddInscription" class="btn btn-success">Ajouter un participant dans une formation</a>
       <table class="table">
         <thead>
         <tr>
-          <th>Intitulé</th>
-          <th>Nombre de jours</th>
-          <th>Année</th>
-          <th>Mois</th>
-          <th>Nombre de participants</th>
+          <th>Formation</th>
+          <th>Les participants</th>
           <th>Action</th>
         </tr>
         </thead>
         <tbody>
-        <% List<Formation> formations = (List<Formation>) request.getAttribute("formations"); %>
-        <% for(Formation f : formations) { %>
+        <% Map<Formation, List<Participant>> data = (Map<Formation, List<Participant>>) request.getAttribute("data"); %>
+        <% for( Formation f : data.keySet() ) {%>
         <tr>
           <td><%= f.getIntitule() %></td>
-          <td><%= f.getNombre_jours() %></td>
-          <td><%= f.getAnnee() %></td>
-          <td><%= f.getMois() %></td>
-          <td><%= f.getNombre_participants() %></td>
+          <% List<Participant> parts = data.get(f); %>
+          <td><%
+            for(Participant p : parts) {
+          %>
+            <span class="badge badge-secondary"><%= p.getNom() %> <%= p.getPrenom() %></span>
+            <%}%>
+          </td>
+
           <td>
             <form action="#" method="post">
               <input type="hidden" name="id_row" value="<%= f.getCode_formation() %>">
               <button type="submit" class="btn btn-primary">Modifier</button>
             </form>
 
-            <form action="ServletDeleteCourse" method="post">
+            <form action="#" method="post">
               <input type="hidden" name="id_row" value="<%= f.getCode_formation() %>">
               <button type="submit" class="btn btn-danger">Supprimer</button>
             </form>
+
           </td>
         </tr>
         <% } %>

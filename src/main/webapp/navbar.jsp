@@ -17,10 +17,10 @@
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 	      <li class="nav-item active">
-	        <a class="nav-link" href="ServletHome" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
+	        <a class="nav-link" href="ServletHomeSimpleUser" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
 	      </li>
 			<li class="nav-item">
-				<a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Inscriptions</a>
+				<a class="nav-link" href="ServletInscription" style="font-size: 15px;">Inscriptions</a>
 			</li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Participants</a>

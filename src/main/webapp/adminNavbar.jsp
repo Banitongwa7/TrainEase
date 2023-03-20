@@ -24,6 +24,9 @@
 				<a class="nav-link" href="ServletUtilisateurs" style="font-size: 15px;">Utilisateurs</a>
 			</li>
 			<li class="nav-item">
+				<a class="nav-link" href="ServletInscription" style="font-size: 15px;">Inscriptions</a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Participants</a>
 			</li>
 			<li class="nav-item">

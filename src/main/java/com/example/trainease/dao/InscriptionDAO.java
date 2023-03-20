@@ -127,7 +127,8 @@ public class InscriptionDAO {
         }
 
         for(int id : idParticipant) {
-            participants.add(participantDAO.getParticipant(id));
+            Participant participant = participantDAO.getParticipant(id);
+            participants.add(participant);
         }
         return participants;
     }
@@ -150,7 +151,8 @@ public class InscriptionDAO {
         }
 
         for(int id : idFormation) {
-            formations.add(formationDAO.getFormation(id));
+            Formation formation = formationDAO.getFormation(id);
+            formations.add(formation);
         }
         return formations;
     }

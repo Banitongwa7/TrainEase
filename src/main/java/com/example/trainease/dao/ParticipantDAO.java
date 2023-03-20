@@ -33,8 +33,7 @@ public class ParticipantDAO {
 
     public Participant getParticipant(int matricule_participant) {
         String sql = "SELECT * FROM participant WHERE matricule_participant = ?";
-
-        participant = null;
+        participant = new Participant();
         try {
             ps = DatabaseConnect.getConnection().prepareStatement(sql);
             ps.setInt(1, matricule_participant);
