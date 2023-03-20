@@ -17,24 +17,24 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="liste_participants.jsp" style="font-size: 15px;">Participants</a>
-	      </li>
-	      <li class="nav-item">
-          	        <a class="nav-link" href="UsersList.jsp" style="font-size: 15px;">Utilisateurs</a>
-          </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="liste_formation.jsp" style="font-size: 15px;">Formations</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="profil.jsp" style="font-size: 15px;">Profil</a>
-	      </li>
-	      <li class="nav-item">
-          	        <a class="nav-link" href="#" style="font-size: 15px;">Contact</a>
-          </li>
+			<li class="nav-item active">
+				<a class="nav-link" href="ServletHome" style="font-size: 15px;">Accueil <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="ServletAddUser" style="font-size: 15px;">Utilisateurs</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="ServletUsersList" style="font-size: 15px;">Participants</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="ServletFormation" style="font-size: 15px;">Formations</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="ServletFormateur" style="font-size: 15px;">Formateurs</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="ServletProfil" style="font-size: 15px;">Mon Profil</a>
+			</li>
 	    </ul>
 	  </div>
 	</nav>

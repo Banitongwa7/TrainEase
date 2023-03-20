@@ -15,7 +15,7 @@
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col-sm-3 mt-3">
-            <img src="Assets/img/TrainEaseLogo.png"
+            <img src="assets/img/TrainEaseLogo.png"
                  class="position-relative mx-auto d-block img-fluid w-50 float-left">
         </div>
         <div class="col-sm-9">
@@ -34,7 +34,11 @@
 
 
     <div class="navbar mt-3 d-flex align-items-center justify-content-center">
-            <%@ include file="navbar.jsp" %>
+		<% if (session.getAttribute("role").equals("Administrateur")) {%>
+			<%@ include file="adminNavbar.jsp" %>
+		<% } else { %>
+			<%@ include file="navbar.jsp" %>
+		<% } %>
     </div>
 
 

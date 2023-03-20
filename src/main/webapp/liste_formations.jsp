@@ -46,7 +46,11 @@
 
 
     <div class="navbar mt-3">
-            <%@ include file="navbar.jsp" %>
+      <% if (session.getAttribute("role").equals("Administrateur")) {%>
+        <%@ include file="adminNavbar.jsp" %>
+      <% } else { %>
+        <%@ include file="navbar.jsp" %>
+      <% } %>
     </div>
 
 

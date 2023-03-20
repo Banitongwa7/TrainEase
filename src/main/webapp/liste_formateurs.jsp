@@ -29,7 +29,11 @@
 
   <!-- navbar -->
   <div class="navbar mt-3 d-flex align-items-center justify-content-center">
-    <%@ include file="navbar.jsp" %>
+    <% if (session.getAttribute("role").equals("Administrateur")) {%>
+      <%@ include file="adminNavbar.jsp" %>
+    <% } else { %>
+      <%@ include file="navbar.jsp" %>
+    <% } %>
   </div>
 
   <div class="container">

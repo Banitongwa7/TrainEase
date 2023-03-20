@@ -35,13 +35,18 @@ public class ServletLogin extends HttpServlet {
 
        // check username and password
         if(user != null){
-
             HttpSession session = request.getSession();
             session.setAttribute("email", user.getEmail());
             session.setAttribute("role", role.getLibelle());
 
-            // redirect
-            response.sendRedirect("ServletHome");
+            if (role.getLibelle().equals("Administrateur")) {
+                // redirect
+                response.sendRedirect("ServletHome");
+            }else {
+                // redirect
+                response.sendRedirect("ServletHomeSimpleUser");
+            }
+
         }else{
             response.sendRedirect("ServletLogin");
         }

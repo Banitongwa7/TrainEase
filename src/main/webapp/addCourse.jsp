@@ -40,8 +40,12 @@
 
 
 	    <div class="navbar mt-3 d-flex justify-content-center" style="text-align: center; margin: 0 auto;">
-                    <%@ include file="navbar.jsp" %>
-                </div>
+			<% if (session.getAttribute("role").equals("Administrateur")) {%>
+				<%@ include file="adminNavbar.jsp" %>
+			<% } else { %>
+				<%@ include file="navbar.jsp" %>
+			<% } %>
+		</div>
 
 
 
