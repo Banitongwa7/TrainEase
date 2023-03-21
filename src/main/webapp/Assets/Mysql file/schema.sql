@@ -1,4 +1,6 @@
-CREATE DATABASE `trainease`; /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
+CREATE DATABASE `trainease` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
+
+
 
 create table domaine
 (
@@ -47,7 +49,7 @@ create table participant
         primary key,
     nom                   char(250) null,
     prenom                char(250) null,
-    date_naissance        date      null,
+    date_naissance        char(200) null,
     code_profil           int       null,
     constraint participant_profil_fk
         foreign key (code_profil) references profil (code_profil)
@@ -55,9 +57,9 @@ create table participant
 
 create table formation_participant
 (
-    code_formation        int  not null,
-    matricule_participant int  not null,
-    date_inscription      date null,
+    code_formation        int                                not null,
+    matricule_participant int                                not null,
+    date_inscription      datetime default CURRENT_TIMESTAMP null,
     primary key (matricule_participant, code_formation),
     constraint formation_participant_formation_null_fk
         foreign key (code_formation) references formation (code_formation),
@@ -74,7 +76,7 @@ create table role
 
 create table utilisateur
 (
-    code_utilisateur int       not null
+    code_utilisateur int auto_increment
         primary key,
     email            char(250) not null,
     password         text      not null,
@@ -82,6 +84,3 @@ create table utilisateur
     constraint utilisateur_role_fk
         foreign key (code_role) references role (code_role)
 );
-
-
-
