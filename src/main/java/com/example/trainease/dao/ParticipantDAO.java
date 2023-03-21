@@ -55,6 +55,7 @@ public class ParticipantDAO {
     }
 
     public Boolean deleteParticipant(int matricule_participant) {
+        // delete in cascade
         String sql = "DELETE FROM participant WHERE matricule_participant = ?";
 
         try {

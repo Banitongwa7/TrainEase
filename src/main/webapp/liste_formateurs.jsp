@@ -56,7 +56,7 @@
           <tbody>
           <% List<Formateur> formateurs = (List<Formateur>) request.getAttribute("formateurs"); %>
           <% for(Formateur f : formateurs) { %>
-            <tr onclick="handleRow(e.currentTarget)">
+            <tr onclick="handleRow(this)">
               <th scope="row"><%= f.getNom() %></th>
               <td><%= f.getPrenom() %></td>
               <td><%= f.getEmail() %></td>
