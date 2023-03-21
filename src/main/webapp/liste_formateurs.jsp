@@ -7,9 +7,8 @@
   <title>Formation</title>
   <!-- Inclure les fichiers Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- SweetAlert 2 -->
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 </head>
 <body>
 
@@ -44,32 +43,32 @@
         <a href="ServletAddFormateur" class="btn btn-success">Ajouter un formateur</a>
       </div>
       <div class="card-body">
-        <table class="table table-striped">
+        <table class="table table-hover">
           <thead>
             <tr>
-              <th style="color: #008ad3;">Nom</th>
-              <th style="color: #008ad3;">Prenom</th>
-              <th style="color: #008ad3;">E-mail</th>
-              <th style="color: #008ad3;">Téléphone</th>
-              <th style="color: #008ad3;">Actions</th>
+              <th scope="col" style="color: #008ad3;">Nom</th>
+              <th scope="col" style="color: #008ad3;">Prenom</th>
+              <th scope="col" style="color: #008ad3;">E-mail</th>
+              <th scope="col" style="color: #008ad3;">Téléphone</th>
+              <th scope="col" style="color: #008ad3;">Actions</th>
             </tr>
           </thead>
           <tbody>
           <% List<Formateur> formateurs = (List<Formateur>) request.getAttribute("formateurs"); %>
           <% for(Formateur f : formateurs) { %>
-            <tr>
-              <td><%= f.getNom() %></td>
+            <tr onclick="handleRow(e.currentTarget)">
+              <th scope="row"><%= f.getNom() %></th>
               <td><%= f.getPrenom() %></td>
               <td><%= f.getEmail() %></td>
               <td><%= f.getPhone() %></td>
               <td>
                 <form action="#" method="post">
-                  <input type="hidden" name="id_row" value="">
+                  <input type="hidden" name="id_row" value="<%= f.getCode_formateur() %>">
                   <button type="submit" class="btn btn-primary">Modifier</button>
                 </form>
 
                 <form action="ServletDeleteCourse" method="post">
-                  <input type="hidden" name="id_row" value="">
+                  <input type="hidden" name="id_row" value="<%= f.getCode_formateur() %>">
                   <button class="btn btn-sm btn-danger delete-button">Supprimer</button>
                 </form>
               </td>
@@ -85,5 +84,12 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- SweetAlert 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<script>
+  function handleRow(element) {
+    console.log(element)
+  }
+</script>
 </body>
 </html>
